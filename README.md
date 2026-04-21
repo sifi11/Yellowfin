@@ -1,27 +1,25 @@
 # Yellowfin Malware Package
 
-A spyware package written in Python designed to get you all of the information from your target's machine to you via Telegram.
+A spyware and reverse shell package written in Python and designed to get you all of the information from your target's machine to you.
 
 ---
 
-## Modules
+## Current Modules
 - Clipboard Reader
 - System Information Grabber
-- Network Information Grabber
 - Screen Capture
-- Exporter
 
 ---
 
 ## Features
-- 5 Modules
+- 3 Modules
 
 ---
 
 ## Roadmap
 - [x] Build Spyware Modules
 - [x] Create Reverse Shell
-- [ ] Add Modules
+- [ ] Add More Modules
 
 ---
 
