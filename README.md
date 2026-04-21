@@ -20,7 +20,7 @@ A spyware package written in Python designed to get you all of the information f
 
 ## Roadmap
 - [x] Build Spyware Modules
-- [ ] Create Reverse Shell
+- [x] Create Reverse Shell
 - [ ] Add Modules
 
 ---
