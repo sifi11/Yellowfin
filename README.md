@@ -13,6 +13,7 @@ A spyware and reverse shell package written in Python and designed to get you al
 
 ## Features
 - 3 Modules
+- Instruction Manual
 
 ---
 
