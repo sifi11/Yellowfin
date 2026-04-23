@@ -10,12 +10,10 @@ with open('config.json', 'r') as file:
     data = json.load(file)
 
 # Get new info
-a1 = input("What's your server's IP? ")
-a2 = input("What's your server's port?(Put 4444) ")
+host = input("What's your server's IP? ")
 
 # Encrypt each value and convert the resulting bytes to a string for JSON storage
-data['a1'] = cipher.encrypt(host.encode()).decode()
-data['a2'] = cipher.encrypt(port.encode()).decode()
+data['host'] = cipher.encrypt(host.encode()).decode()
 
 # Save as a standard readable JSON file
 with open('config.json', 'w') as file:
