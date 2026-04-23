@@ -1,4 +1,19 @@
 import socket
+import json
+
+KEY = b'FtABmI-psWsyRuNo-ZqCGFjhdhUlB6RcNxORcdKcN7Q='
+cipher = Fernet(KEY)
+
+def load_config():
+    try:
+        with open('config.json', 'r') as file:
+            data = json.load(file)
+        host = cipher.decrypt(data['host'].encode()).decode()
+        port = int(cipher.decrypt(data['port'].encode()).decode())
+        return host, port
+    except Exception as e:
+        print(f"Config error: {e}")
+        exit(1)
 
 def receive_file(conn, save_path):
     try:
@@ -19,7 +34,7 @@ def receive_file(conn, save_path):
     except Exception as e:
         print(f"[*] Error receiving file: {e}")
 
-def start_server(host='0.0.0.0', port=4444):
+def start_server(host=host, port=int(port)):
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server.bind((host, port))
