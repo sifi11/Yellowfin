@@ -3,8 +3,6 @@ import subprocess
 import json
 import os
 from cryptography.fernet import Fernet
-
-# Ensure these match your folder structure
 from Modules.clipboard import grab_clipboard
 from Modules.screenshot import grab_screen
 from Modules.information import get_info
