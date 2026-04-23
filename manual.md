@@ -7,3 +7,8 @@
 6. Run the main file in on the target's machine(make sure you have the config.json with it in the folder).
 7. It should establish a connection to the target machine.
 8. You can also use special commands like clip, screenshot, and sysinfo to run the modules.
+
+## Web Dashboard (In Progress)
+To use the web dashboard, run `python3 backend.py` and naviagte in your browser to `http://localhost:8080`. 
+
+> Do Not use VS Code Live Server or just double click the HTML file.
