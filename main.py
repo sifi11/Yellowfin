@@ -14,8 +14,8 @@ def load_config():
     try:
         with open('config.json', 'r') as file:
             data = json.load(file)
-        host = cipher.decrypt(data['a1'].encode()).decode()
-        port = int(cipher.decrypt(data['a2'].encode()).decode())
+        host = cipher.decrypt(data['host'].encode()).decode()
+        port = int(cipher.decrypt(data['port'].encode()).decode())
         return host, port
     except Exception as e:
         print(f"Config error: {e}")
